@@ -1,0 +1,144 @@
+
+:root {
+  --primary: #4F46E5;
+  --primary-dark: #4338CA;
+  --success: #059669;
+  --danger: #DC2626;
+  --warning: #D97706;
+  --background: #F9FAFB;
+  --card: #FFFFFF;
+  --text: #111827;
+  --text-muted: #6B7280;
+  --border: #E5E7EB;
+}
+
+[data-theme="dark"] {
+  --background: #1F2937;
+  --card: #111827;
+  --text: #F9FAFB;
+  --text-muted: #9CA3AF;
+  --border: #374151;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: var(--background);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.navbar {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.card {
+  border: none;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+}
+
+.btn {
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+}
+
+.btn-primary {
+  background: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+  border-color: var(--primary-dark);
+}
+
+.form-control, .form-select {
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+}
+
+.table {
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.category-header td {
+  padding: 1rem !important;
+}
+
+.badge {
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+}
+
+.alert {
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.footer {
+  background: var(--card);
+  border-top: 1px solid var(--border);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .card {
+    margin-bottom: 1rem;
+  }
+
+  .table-responsive {
+    font-size: 0.9rem;
+  }
+
+  .badge {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
+  }
+
+  .btn {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  .col-md-4, .col-md-8 {
+    padding: 0;
+  }
+
+  .navbar-brand {
+    font-size: 1.1rem;
+  }
+}
+
+/* Enhanced Styling */
+.expense-card {
+  background: linear-gradient(145deg, var(--card) 0%, #fcfcfc 100%);
+}
+
+.stat-card {
+  border-left: 4px solid var(--primary);
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
